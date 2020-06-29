@@ -1,4 +1,4 @@
-*@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 
 html, body {
@@ -8,11 +8,44 @@ html, body {
   color: #222;
 }
 
-.form-main {
 
-  width: 50%;
-  margin-top: 4rem;
+/*<table_info>*/
 
+.table_info {
+
+  align-content: space-between;
+}
+
+/*school logo*/
+
+.logoschool {
+
+  width: 40%;
+}
+
+.logoschoolfooter {
+  width: 80%;
+  padding-top: .7rem;
+
+}
+
+/*<footer>*/
+
+.footer {
+
+  width: 1200px;
+}
+
+.picture {
+
+  padding-top: 5rem;
+}
+
+/*<last carousel image text>*/
+
+.final_image {
+  padding-top: 10rem;
+}
 
 }
 
@@ -48,12 +81,7 @@ html, body {
   padding-bottom: 1rem;
 }
 
-/*.carousel-caption-1 h3 {
-  font-size: 200%;
-  font-weight: 500;
-  text-shadow: 1px 1px 10px #000;
-  padding-bottom: 1rem;
-}*/
+
 
 
 .btn-primary {
@@ -76,8 +104,8 @@ html, body {
 }
 
 .welcome {
-  width: 75%;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
   padding-top: 2rem;
 }
 
@@ -153,6 +181,16 @@ hr.light-100 {
     font-size: 4em;
     padding: 2rem;
   }
+  .footer {
+    max-width: 80%;
+  }
+  .footer_text {
+    
+
+  }
+  html {
+    font-size: 90%;
+  }
   }
 @media (max-width: 768px) {
   .carousel-caption {
@@ -225,6 +263,8 @@ figure {
 
 
 
+
+
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap
@@ -249,4 +289,3 @@ Extra (xl) large devices (large desktops, 1200px and up)
 
 
 
-*/*/*/

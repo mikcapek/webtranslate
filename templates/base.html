@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type = 'text/javascript'></script>
+<script type = 'src/javascript' src = 'custom.'></script>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Překlady pro školy</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="static/styles/style.css" rel="stylesheet" type = "text/css">
+
+</head>
+<body>
+
+
+
+<style>
+.logoschool {
+
+	width: 50%;
+}
+
+.logoschoolfooter {
+	width: 80%;
+
+}
+</style>
+
+
+<!-- Navigation -->
+
+<nav class= 'navbar navbar-expand-md navbar-light bg-light sticky-top'>
+<div class= 'container-fluid'>
+	<a class = 'navbar-brand' href='#'><img src="{{url_for('static', filename = 'img/logoschool.png')}}" class = "logoschool" onClick = "location.href = '/'"/></a>
+	<button class = 'navbar-toggler' type= 'button' data-toggle = 'collapse' data-target ='#navbarResponsive'> <span class = 'navbar-toggler-icon'></span>
+	</button>
+<div class = 'collapse navbar-collapse' id=navbarResponsive>
+	<ul class = 'navbar-nav ml-auto'>
+		<li class= 'nav-item active'>
+				<a class = 'nav-link' href='/'>Home</a>
+			
+		</li>
+		<li class= 'nav-item'>
+			<a class = 'nav-link' href='/o-nas'>O nás</a>
+		</li>
+		<li class= 'nav-item'>
+			<a class = 'nav-link' href='#'>Služby</a>
+		</li>
+		<li class= 'nav-item'>
+			<a class = 'nav-link' href = '/' onClick="document.getElementById('fun').scrollIntoView();">Ceník</a>
+		</li>
+		<li class= 'nav-item'>
+			<a class = 'nav-link' href='/contactform'>Kontakt</a>
+		</li>
+	</ul>
+</div>
+
+	
+</div>
+	</nav>
+
+
+<!--- Image Slider -->
+
+
+{% block content %}{% endblock %}
+
+
+
+
+<!--- Jumbotron -->
+
+
+
+<!--- Welcome Section -->
+
+
+<!--- Three Column Section -->
+
+
+
+
+<!--- Two Column Section -->
+
+
+<!--- Fixed background -->
+
+
+<!--- Emoji Section -->
+
+   
+<!--- Meet the team -->
+
+
+<!--- Cards -->
+
+
+<!--- Two Column Section -->
+
+
+<!--- Connect -->
+
+<!--- Footer -->
+
+<style>
+
+.footer {
+
+	width: 1200px;
+}
+
+</style>
+
+
+<footer>
+	<div class = 'footer'>
+<div class = 'container-fluid-padding'>
+<div class = 'row text-center'>
+	<div class = 'col-md-4'>
+		<img src="{{url_for('static', filename = 'img/logoschool.png')}}" class = "logoschoolfooter"/>
+		<hr class = 'light'>
+		<p>Tel: +420 733 658 097</p>
+		<p>Email: prekladyproskoly@gmail.com</p>
+
+	</div>
+	<div class = 'col-md-4'>
+		<hr class = 'light'>
+		<h5>Naše provozní doba</h5>
+		<hr class = 'light'>
+		<p>Všední den: 8:00 - 19:00 </p>
+		<p>Víkend: 10:00 - 16:00 </p>
+	</div>
+	<div class = 'col-md-4'>
+		<hr class = 'light'>
+		<h5>Naše sídlo</h5>
+		<hr class = 'light'>
+		<p>Řipská 1 </p>
+		<p>Praha 1, 101 00</p>
+	</div>
+
+</div>
+</div>
+</div>
+	</footer>
+
+
+<div class = 'col-12'>
+	<hr class = ;light>
+	<h5>&copy; preklady-pro-skoly.cz</h5>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
