@@ -9,6 +9,11 @@ html, body {
 }
 
 
+.nav-item {
+
+  white-space: nowrap;
+}
+
 /*<table_info>*/
 
 .table_info {
