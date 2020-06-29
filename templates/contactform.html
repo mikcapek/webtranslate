@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<style>
+
+  body {
+
+    background-color: gray ;
+
+  }
+
+
+.form-main {
+
+  width: 100%;
+  padding: 3rem;
+
+}
+
+</style>
+
+<form action="/contactform" method = 'post' class = "form-main needs-validation" style = "width: 500px; margin: auto" enctype="multipart/form-data"> 
+<div class = "row">
+  <div class ="col">
+  <label for="firstname">Jméno</label>
+  <input type="text" name="firstname" id = "firstname" class = "form-control" required>
+  <div class = "invalid-feedback">Nevyplněno</div>
+</div>
+<div class = "col">
+  <label for ="surname">Příjmení</label>
+  <input type="text" name="surname" id = "surname" class = "form-control" required>
+</div>
+</div>
+<div class = "form-group">
+<label for="email">Email</label>
+<input type="text" name="email" id= "email" class = "form-control" required>
+<div class = "valid-feedback">vyplněno</div>
+</div>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Zpráva/Dotaz</label>
+    <textarea class="form-control" name = 'dotaz'id="exampleFormControlTextarea1" rows="5"></textarea>
+  </div>
+<div class = "form-group">
+<div class = "row">
+  <div class = "col">
+  <label for = "language">Z jazyku</label>
+  <select name="from language" id = "language" class = "form-control" required>
+    <option value= "Czech">Čeština</option>
+    <option value= "English">Angličtina</option>
+    <option value= "German">Němčina</option>
+  </select>
+</div>
+<div class = "col">
+  <label for = "language">Do jazyka</label>
+  <select name="to language" id = "language" class = "form-control" required>
+    <option value= "Czech">Čeština</option>
+    <option value= "English">Angličtina</option>
+    <option value= "German">Němčina</option>
+  </select>
+</div>
+</div>
+</div>
+<div class = "form-group">
+<div class="custom-file mb-3">
+    <input type="file" class="custom-file-input" name = "attachment" id="validatedCustomFile">
+    <label class="custom-file-label" for="validatedCustomFile">Vybrat soubor...</label>
+    <div class="invalid-feedback">Example invalid custom file feedback</div>
+  </div>
+</div>
+<div class = "form-group">
+<button type = "submit" value = "Send Email" class = "btn btn-primary">Odeslat dotaz/poptávku</button>
+</div>
+
+
+
+</form>
+
+
+
+<script>
+  var form = document.querySelector('.needs-validation');
+  form.addEventListener('submit', function(event) {
+    if (form.checkValidity() == false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    form.ClassList.add('was-validated')
+  })
+
+</script>
+
+{% endblock %}
