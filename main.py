@@ -4,6 +4,7 @@ from flask_bootstrap import Bootstrap
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
 
+
 app = Flask(__name__ , template_folder = './templates')
 
 app.secret_key = 'YourSuperSecreteKey'
@@ -101,7 +102,11 @@ def contactform():
 	
 
 		mail.send(msg)
-		return "Successfully  sent message!"
+
+		flash("zpráva byla odeslána!")
+		return redirect(request.url)
+		
+
 		
 	return render_template('/contactform.html')
 

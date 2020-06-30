@@ -8,11 +8,15 @@ html, body {
   color: #222;
 }
 
-
-.nav-item {
-
-  white-space: nowrap;
+.btn-group-lg>.btn, .btn-lg {
+  margin-left: 70px;
 }
+
+  
+}
+
+
+
 
 /*<table_info>*/
 
@@ -63,6 +67,7 @@ html, body {
 }
 .nav-link {
   font-size: 1.1em !important;
+  white-space: nowrap;
 }
 .carousel-inner img {
   width: 100%;
@@ -102,6 +107,7 @@ html, body {
 .jumbotron {
   padding: 1rem;
   border-radius: 0;
+  
 }
 
 .padding {

@@ -4,6 +4,8 @@
 
 {% block content %}
 
+
+
 <style>
 
   body {
@@ -70,8 +72,15 @@
     <div class="invalid-feedback">Example invalid custom file feedback</div>
   </div>
 </div>
+<script>
+function message_sent() {
+ if (form.checkValidity() == true) {
+  window.alert("Vaše zpráva byla odeslána"); 
+}
+</script>
 <div class = "form-group">
-<button type = "submit" value = "Send Email" class = "btn btn-primary">Odeslat dotaz/poptávku</button>
+<button type = "submit" value = "Send Email" class = "btn btn-primary" onclick="message_sent()">Odeslat dotaz/poptávku</button>
+
 </div>
 
 
