@@ -3,6 +3,7 @@ from flask import Flask, redirect, flash, url_for, render_template, request
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
+from module_with_your_flask_app import app as application
 
 
 app = Flask(__name__ , template_folder = './templates')
@@ -103,7 +104,7 @@ def contactform():
 
 		mail.send(msg)
 
-		flash("zpráva byla odeslána!")
+		flash("zprava byla odeslana!")
 		return redirect(request.url)
 		
 
@@ -111,5 +112,5 @@ def contactform():
 	return render_template('/contactform.html')
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	application.run(debug=True)
 

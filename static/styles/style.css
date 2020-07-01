@@ -68,6 +68,13 @@ html, body {
 .nav-link {
   font-size: 1.1em !important;
   white-space: nowrap;
+
+
+}
+
+.nav-item {
+
+  white-space: nowrap;
 }
 .carousel-inner img {
   width: 100%;
