@@ -3,7 +3,7 @@ from flask import Flask, redirect, flash, url_for, render_template, request
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
-from module_with_your_flask_app import app as application
+
 
 
 app = Flask(__name__ , template_folder = './templates')
