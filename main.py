@@ -3,7 +3,6 @@ from flask import Flask, redirect, flash, url_for, render_template, request
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
-from app import app
 
 
 
