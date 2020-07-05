@@ -26,12 +26,19 @@ mail = Mail(app)
 
 @app.route('/')
 def home():
-	return render_template('index.html')
+	return render_template('index.html', TRANSLATE_PRICE_STANDARD = 240, TRANSLATE_PRICE_EXPRESS = 280, CORRECT_PRICE_STANDARD = 100, CORRECT_PRICE_EXPRESS = 140, SUBTITLE_PRICE_STANDARD = 100, SUBTITLE_PRICE_EXPRESS= 140, TRANSCRIPT_PRICE_STANDARD= 50, TRANSCRIPT_PRICE_EXPRESS= 80  )
 
 @app.route('/o-nas')
 def onas():
 	return render_template('o-nas.html')
 
+@app.route('/sluzby')
+def sluzby():
+	return render_template('sluzby.html')
+
+@app.route('/cenik')
+def cenik():
+	return render_template('cenik.html')
 
 
 def allowed_file(filename):

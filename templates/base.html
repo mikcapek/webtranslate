@@ -8,21 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Odborné překlady</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	
 	<link href="static/styles/style.css" rel="stylesheet" type = "text/css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168833019-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-168833019-1');
-	</script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
 
 
 </head>
@@ -60,10 +49,10 @@
 			<a class = 'nav-link' href='/o-nas'>O nás</a>
 		</li>
 		<li class= 'nav-item'>
-			<a class = 'nav-link' href='#'>Služby</a>
+			<a class = 'nav-link' href='/sluzby'>Služby</a>
 		</li>
 		<li class= 'nav-item'>
-			<a class = 'nav-link' href = '/' onClick="document.getElementById('fun').scrollIntoView();">Ceník</a>
+			<a class = 'nav-link' href = '/cenik' onClick="document.getElementById('fun').scrollIntoView();">Ceník</a>
 		</li>
 		<li class= 'nav-item'>
 			<a class = 'nav-link' href='/contactform'>Kontakt</a>
@@ -77,6 +66,23 @@
 
 
 <!--- Image Slider -->
+
+<!--- Scripts -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168833019-1"></script>
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-168833019-1');
+</script>
+<script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
 
 
 {% block content %}{% endblock %}
@@ -129,7 +135,7 @@
 
 
 <footer>
-	<div class = 'footer'>
+	<div class = 'footer container'>
 <div class = 'container-fluid-padding'>
 <div class = 'row text-center'>
 	<div class = 'col-md-4'>
@@ -150,8 +156,8 @@
 		<hr class = 'light'>
 		<h5>Naše sídlo</h5>
 		<hr class = 'light'>
-		<p>Řipská 1 </p>
-		<p>Praha 1, 101 00</p>
+		<p>Blanická 24, Praha 2, 120 00</p>
+		<p>IČ: 05170389</p>
 	</div>
 
 </div>

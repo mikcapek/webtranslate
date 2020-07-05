@@ -1,0 +1,94 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+ <div id ="table" class="table">
+ <div class = 'container-fluid'>
+ <div class = 'row text-center table_info'>
+ 	<table class="table">
+ 	<div class = 'container-fluid padding'>
+ 		<h5>Překlady</h5>
+ 	</div>
+    <tr>
+      <th scope="col">Z jazyka</th>
+      <th scope="col">Do jazyka</th>
+      <th scope="col">Do 7 kalendářních dní</th>
+      <th scope="col">Expresní do 24 hodin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Čeština</td>
+      <td>Angličtina</td>
+      <td>240 Kč/Ns</td>
+      <td>280 Kč/Ns</td>
+    </tr>
+    <tr>
+      <td scope="row">Angličtina</td>
+      <td>Čeština</td>
+      <td>240 Kč/Ns</td>
+      <td>280 kč/Ns</td>
+    </tr>
+</tbody>
+</table>
+	<table class = 'table'>
+    <div class = 'container-fluid padding'>
+ 		<h5>Korektura</h5>
+ 	</div>
+    <tr>
+      
+      <th scope="col">V jazyce</th>
+      <th scope="col">Do 7 kalendářních dní</th>
+      <th scope="col">Expresní do 24 hodin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Čeština</td>
+      
+      <td>120 Kč/Ns</td>
+      <td>140 Kč/Ns</td>
+    </tr>
+    <tr>
+      <td scope="row">Angličtina</td>
+      
+      <td>120 Kč/Ns</td>
+      <td>140 kč/Ns</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<table class = 'table'>
+    <div class = 'container-fluid padding'>
+ 		<h5>Titulky</h5>
+ 	</div>
+    <tr>
+      
+      <th scope="col">V jazyce</th>
+      <th scope="col">Do 7 kalendářních dní</th>
+      <th scope="col">Do 48 hodin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Čeština</td>
+      
+      <td>50 Kč/min.</td>
+      <td>100 Kč/min.</td>
+    </tr>
+    <tr>
+      <td scope="row">Angličtina</td>
+      
+      <td>50 Kč/min.</td>
+      <td>100 kč/min.</td>
+    </tr>
+    
+  </tbody>
+</table>
+ 	
+ </div>
+ </div>
+ </div>
+
+{% endblock %}

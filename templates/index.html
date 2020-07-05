@@ -162,19 +162,23 @@
 <button class="fun btn btn-outline-secondary" id = "fun" data-toggle="collapse" data-target="#table">klikni pro ceník
 </button>
 
- <div id ="table" class="collapse">
+ <div id ="table" class="collapse container">
  <div class = 'container-fluid'>
- <div class = 'row text-center table_info'>
- 	<table class="table">
+ <div class = 'row text-center table_info container'>
+ 	<table class="table container">
  	<div class = 'container-fluid padding'>
- 		<h5>Překlady</h5>
+ 		<h5>Služby</h5>
  	</div>
+ 	
     <tr>
-      <th scope="col">Z jazyka</th>
-      <th scope="col">Do jazyka</th>
-      <th scope="col">Do 7 kalendářních dní</th>
-      <th scope="col">Expresní do 24 hodin</th>
-    </tr>
+      <th scope="col">Jazyk</th>
+      <th scope="col">Překlad do jazyka</th>
+      <th scope="col">Standard</th>
+      <th scope="col">Express</th>
+      <th scope="col">Korektura</th>
+      <th scope="col">Titulky</th>
+      <th scope="col">Transkripce</th>
+  </tr>
   </thead>
   <tbody>
     <tr>
@@ -182,78 +186,106 @@
       <td>Angličtina</td>
       <td>240 Kč/Ns</td>
       <td>280 Kč/Ns</td>
+      <td>140 Kč/Ns</td>
+      <td>100 Kč/min.</td>
+      <td>50 Kč/min.</td>
     </tr>
     <tr>
       <td scope="row">Angličtina</td>
       <td>Čeština</td>
       <td>240 Kč/Ns</td>
       <td>280 kč/Ns</td>
+      <td>140 Kč/Ns</td>
+      <td>100 Kč/min.</td>
+      <td>50 Kč/min.</td>
+
     </tr>
 </tbody>
 </table>
-	<table class = 'table'>
-    <div class = 'container-fluid padding'>
- 		<h5>Korektura</h5>
- 	</div>
-    <tr>
-      
-      <th scope="col">V jazyce</th>
-      <th scope="col">Do 7 kalendářních dní</th>
-      <th scope="col">Expresní do 24 hodin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td scope="row">Čeština</td>
-      
-      <td>120 Kč/Ns</td>
-      <td>140 Kč/Ns</td>
-    </tr>
-    <tr>
-      <td scope="row">Angličtina</td>
-      
-      <td>120 Kč/Ns</td>
-      <td>140 kč/Ns</td>
-    </tr>
-    
-  </tbody>
-</table>
-
-<table class = 'table'>
-    <div class = 'container-fluid padding'>
- 		<h5>Titulky</h5>
- 	</div>
-    <tr>
-      
-      <th scope="col">V jazyce</th>
-      <th scope="col">Do 7 kalendářních dní</th>
-      <th scope="col">Do 48 hodin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td scope="row">Čeština</td>
-      
-      <td>50 Kč/min.</td>
-      <td>100 Kč/min.</td>
-    </tr>
-    <tr>
-      <td scope="row">Angličtina</td>
-      
-      <td>50 Kč/min.</td>
-      <td>50 kč/min.</td>
-    </tr>
-    
-  </tbody>
+	
 </table>
  	
  </div>
  </div>
  </div>
-<!--- Meet the team -->
+<!--- Kalkulačka -->
+<form action="/action_page.php" class="container text-center">
+	<label for="jazyk">Jazyk:</label>
+  <select name="jazyk" id="jazyk">
+    <option value="jazyk">Čeština</option>
+    <option value="jazyk">Angličtina</option>
+  </select>
+  <br><br>
 
 
-<!--- Contact form -->
+  <label for="sluzba">Služba:</label>
+  <select name="sluzba" id="sluzba">
+    <option value="preklad">Překlad</option>
+    <option value="korektura">Korektura</option>
+    <option value="titulky">Titulky</option>
+    <option value="audi">Transkripce</option>
+  </select>
+  <br><br>
+
+  <label for="typ">Typ:</label>
+  <select class = "typ" name="typ" id="typ">
+    <option value="preklad">Standard</option>
+    <option value="korektura">Express</option>
+  </select>
+  <br><br>
+
+  <label for="pocet" id = "pocet">Počet Normostran:</label>
+  
+    <input class= "integer" value="0"></input>
+
+
+   <!-- div stuff for calculator stuff -->
+
+<div id="calculator" data-translate-price-standard="{ TRANSLATE_PRICE_STANDARD }"
+                    data-translate-price-express="{ TRANSLATE_PRICE_EXPRESS }"
+                    data-correct-price-standard="{ CORRECT_PRICE_STANDARD }"
+                    data-correct-price-express="{ CORRECT_PRICE_STANDARD }"
+                    data-subtitle-price-standard="{ SUBTITLE_PRICE_STANDARD }"
+                    data-subtitle-price-express="{ SUBTITLE_PRICE_EXPRESS }"
+                     data-transcription-price-standard="{ TRANSCRIPT_PRICE_STANDARD }"
+                    data-transcription-price-express="{ TRANSCRIPT_PRICE_EXPRESS }">>
+  
+   <!-- calculator stuff -->
+  
+</div>
+
+<script>
+
+function myfunc() {
+	 
+
+}
+
+</script>
+
+
+
+  <input type="submit" onClick = "myfunc()" value="Vypočítat cenu">
+<br><br>
+<label for="result" id = "result">Cena:</label>
+  
+    <input class= "integer" value="0"></input>
+</form>
+
+<!--- code calculation -->
+
+
+
+
+
+
+<!--- Naše reference -->
+
+<div>
+<h4>Naše reference:</h4>
+
+
+</div>
 
 
 
