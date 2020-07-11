@@ -24,7 +24,7 @@
 
 </style>
 
-<form enctype="multipart/form-data" action="#" method = 'post' class = "form-main needs-validation" style = "width: 500px; margin: auto" > 
+<form enctype="multipart/form-data" action="#" method = 'post' class = "form-main needs-validation" id = 'form' style = "width: 500px; margin: auto" > 
 <div class = "row">
   <div class ="col">
   <label for="firstname">Jméno</label>
@@ -77,7 +77,8 @@
   
 function message_sent() {
 
-if (('was-validated') in form.ClassList) {
+// var form = document.getElementById("form");
+// if (form.classList.contains('was-validated') == true) {
   alert("Vaše zpráva byla odeslána"); 
 }
 
@@ -100,7 +101,7 @@ if (('was-validated') in form.ClassList) {
       event.preventDefault();
       event.stopPropagation();
     }
-    form.ClassList.add('was-validated')
+    form.classList.add('was-validated')
   })
 
 
