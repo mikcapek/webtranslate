@@ -3,10 +3,13 @@ from flask import Flask, redirect, flash, url_for, render_template, request
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
+from flask_babelex import Babel
 
 
 
 app = Flask(__name__ , template_folder = './templates')
+babel = Babel(app)
+mail = Mail(app)
 
 app.secret_key = 'YourSuperSecreteKey'
 
@@ -21,8 +24,17 @@ app.config['MAIL_USERNAME'] = 'prekladyproskoly@gmail.com'
 app.config['MAIL_PASSWORD'] = 'dftifkrliunfzxqt'
 app.config['MAIL_ASCII_ATTTACHMENTS'] = False
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 
-mail = Mail(app)
+
+
+
+@babel.localeselector
+def get_locale():
+	return 'en'
+    # if request.args.get('lang'):
+    #     session['lang'] = request.args.get('lang')
+    # return session.get('lang', 'en')
 
 @app.route('/')
 def home():
