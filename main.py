@@ -8,7 +8,7 @@ from werkzeug.utils import secure_filename
 
 
 app = Flask(__name__ , template_folder = './templates')
-babel = Babel(app)
+# babel = Babel(app)
 mail = Mail(app)
 
 app.secret_key = 'YourSuperSecreteKey'
@@ -24,14 +24,14 @@ app.config['MAIL_USERNAME'] = 'prekladyproskoly@gmail.com'
 app.config['MAIL_PASSWORD'] = 'dftifkrliunfzxqt'
 app.config['MAIL_ASCII_ATTTACHMENTS'] = False
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+# app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 
 
 
 
-@babel.localeselector
-def get_locale():
-	return 'en'
+# @babel.localeselector
+# def get_locale():
+# 	return 'en'
     # if request.args.get('lang'):
     #     session['lang'] = request.args.get('lang')
     # return session.get('lang', 'en')
