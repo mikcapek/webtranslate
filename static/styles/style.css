@@ -23,6 +23,7 @@ html, body {
 .table_info {
 
   align-content: space-between;
+  margin: 1rem;
 }
 
 /*school logo*/

@@ -123,7 +123,7 @@ def contactform():
 
 		mail.send(msg)
 
-		flash("zprava byla odeslana!")
+		# flash("zprava byla odeslana!")
 		return redirect(request.url)
 		
 

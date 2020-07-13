@@ -2,93 +2,95 @@
 
 {% block content %}
 
- <div id ="table" class="table">
- <div class = 'container-fluid'>
- <div class = 'row text-center table_info'>
- 	<table class="table">
- 	<div class = 'container-fluid padding'>
+
+
+<div class = 'container'>
+ <div id ="table" class="table container-fluid table_info row text-center col-lg-12"> 
+ 	<table class="table padding">
+ 	<div class = 'container text-center padding'>
  		<h5>Překlady</h5>
  	</div>
     <tr>
       <th scope="col">Z jazyka</th>
       <th scope="col">Do jazyka</th>
-      <th scope="col">Do 7 kalendářních dní</th>
-      <th scope="col">Expresní do 24 hodin</th>
+      <th scope="col">Standard</th>
+      <th scope="col">Express</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td scope="row">Čeština</td>
-      <td>Angličtina</td>
-      <td>240 Kč/Ns</td>
-      <td>280 Kč/Ns</td>
+      <td scope = "row">Angličtina</td>
+      <td scope = "row">240 Kč/Ns</td>
+      <td scope = "row">280 Kč/Ns</td>
     </tr>
     <tr>
       <td scope="row">Angličtina</td>
-      <td>Čeština</td>
-      <td>240 Kč/Ns</td>
-      <td>280 kč/Ns</td>
+      <td scope= "row">Čeština</td>
+      <td scope= "row">240 Kč/Ns</td>
+      <td scope= "row">280 kč/Ns</td>
     </tr>
 </tbody>
+
+</div>
 </table>
-	<table class = 'table'>
-    <div class = 'container-fluid padding'>
+	<table class = 'table padding'>
+    <div class = 'container text-center padding'>
  		<h5>Korektura</h5>
  	</div>
     <tr>
-      
       <th scope="col">V jazyce</th>
-      <th scope="col">Do 7 kalendářních dní</th>
-      <th scope="col">Expresní do 24 hodin</th>
+      <th scope ="col">Do jazyka</th>
+      <th scope="col">Standard</th>
+      <th scope="col">Express</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td scope="row">Čeština</td>
-      
-      <td>120 Kč/Ns</td>
-      <td>140 Kč/Ns</td>
+      <td scope= "row"> - </td>
+      <td scope = "row">120 Kč/Ns</td>
+      <td scope = "row">140 Kč/Ns</td>
     </tr>
     <tr>
       <td scope="row">Angličtina</td>
-      
-      <td>120 Kč/Ns</td>
-      <td>140 kč/Ns</td>
+      <td scope= "row"> - </td>
+      <td scope= "row">120 Kč/Ns</td>
+      <td scope= "row">140 kč/Ns</td>
     </tr>
-    
+    </div>
   </tbody>
 </table>
 
-<table class = 'table'>
-    <div class = 'container-fluid padding'>
+<table class = 'table padding'>
+    <div class = 'container text-center padding'>
  		<h5>Titulky</h5>
- 	</div>
+  </div>
     <tr>
-      
       <th scope="col">V jazyce</th>
-      <th scope="col">Do 7 kalendářních dní</th>
-      <th scope="col">Do 48 hodin</th>
+      <th scope="col">Do jazyka</th>
+      <th scope="col">Standard</th>
+      <th scope="col">Express</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row">Čeština</td>
-      
-      <td>50 Kč/min.</td>
-      <td>100 Kč/min.</td>
+      <td align = 'center' scope="row">Čeština</td>
+      <td scope = "row"> - </td>
+      <td scope = "row">50 Kč/min.</td>
+      <td scope = "row">100 Kč/min.</td>
     </tr>
     <tr>
-      <td scope="row">Angličtina</td>
-      
-      <td>50 Kč/min.</td>
-      <td>100 kč/min.</td>
+      <td scope="row">Angličtina</td> 
+      <td scope = "row"> - </td>
+      <td scope= "row">50 Kč/min.</td>
+      <td scope= "row">100 kč/min.</td>
     </tr>
-    
+    </div>
   </tbody>
 </table>
- 	
  </div>
- </div>
- </div>
+</div>
+
 
 {% endblock %}

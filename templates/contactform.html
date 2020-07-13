@@ -73,20 +73,20 @@
   </div>
 </div>
 
-<script>
+<!-- <script>
   
 function message_sent() {
 
-// var form = document.getElementById("form");
-// if (form.classList.contains('was-validated') == true) {
-  alert("Vaše zpráva byla odeslána"); 
-}
+var form = document.getElementById("form");
+if (form.classList.contains('was-validated') == true) {
+alert("Vaše zpráva byla odeslána");
+ } 
 
-}
-</script>
+
+</script>  -->
 
 <div class = "form-group">
-<button type = "submit" value = "Send Email" class = "btn btn-primary" onclick="message_sent() ">Odeslat dotaz/poptávku</button>
+<button type = "submit" value = "Send Email" class = "btn btn-primary">Odeslat dotaz/poptávku</button>
 
 </div>
 
@@ -95,18 +95,28 @@ function message_sent() {
 </form>
 
 <script>
-  var form = document.querySelector('.needs-validation');
+  var form = document.querySelector('form')
   form.addEventListener('submit', function(event) {
     if (form.checkValidity() == false) {
       event.preventDefault();
       event.stopPropagation();
-    }
+    } 
+      else 
+
+    {
     form.classList.add('was-validated')
-  })
+    alert("Vaše zpráva byla odeslána");
+  
+  }
+})
 
-
-
-
+  // var form = document.querySelector("form")
+  // form.addEventListener('submit', function() {
+  //   event.preventDefault();
+  //   console.log('submitted!')
+  //   console.log("valid?", form.checkValidity());
+  //   alert("Vaše zpráva byla odeslána");
+  // })
 
 </script>
 
