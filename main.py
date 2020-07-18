@@ -3,12 +3,12 @@ from flask import Flask, redirect, flash, url_for, render_template, request
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
+from flask_babelex import Babel, gettext
 
 
 
 app = Flask(__name__ , template_folder = './templates')
-# babel = Babel(app)
-mail = Mail(app)
+
 
 app.secret_key = 'YourSuperSecreteKey'
 
@@ -20,20 +20,18 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USERNAME'] = 'prekladyproskoly@gmail.com' 
-app.config['MAIL_PASSWORD'] = 'dftifkrliunfzxqt'
+app.config['MAIL_PASSWORD'] = 'zqfwyiornnkovmrn'
 app.config['MAIL_ASCII_ATTTACHMENTS'] = False
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-# app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 
 
+mail = Mail(app)
+babel = Babel(app)
 
-
-# @babel.localeselector
-# def get_locale():
-# 	return 'en'
-    # if request.args.get('lang'):
-    #     session['lang'] = request.args.get('lang')
-    # return session.get('lang', 'en')
+@babel.localeselector
+def get_locale():
+	return 'en'
 
 @app.route('/')
 def home():
@@ -76,54 +74,18 @@ def contactform():
 			flash('No file part')
 			return "where my file"
 		file = request.files['attachment']
-        # if user does not select file, browser also
-        # submit an empty part without filename
-		if file.filename == '':
-			flash('No selected file')
-			return redirect(request.url)
-		if file and allowed_file(file.filename):
-			filename = secure_filename(file.filename)
-			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-
-		with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'rb') as fp:
-			msg.attach("image.png", "image/png", fp.read())
-
-
-
-
-			# file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-			# return redirect(url_for('uploaded_file',
-			# 						filename=filename))
-		
-	
-   
-
-
-		# <sends messages>
-
-		# msg.attach(app.config['UPLOAD_FOLDER'], filename)
-
-	
-		
-		
-		
-
-		# <sends but only from directory>
-		# with open(request.form['attachment'], 'rb') as f:
-			# msg.attach("somefile", 'image/jpg', f.read())
-
-		# if request.files:
-		# 	attachment = request.files['attachment']
-
-		# 	attachment.save(data)
-		# 	msg.attach((attachment).read())
+       
+		# filename = secure_filename(file.filename)
+		# if file and allowed_file(file.filename):
 			
-	
+		# 	file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+		# with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'rb') as fp:
+		# 	msg.attach("image.png", "image/png", fp.read())
+
+
 
 		mail.send(msg)
-
-		# flash("zprava byla odeslana!")
-		return redirect(request.url)
 		
 
 		
