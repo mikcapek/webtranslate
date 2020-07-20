@@ -20,19 +20,19 @@
 	<div class = 'carousel-item active'>
 		<img src="{{url_for('static', filename = 'img/typefast.png')}}"/>
 		<div class = 'carousel-caption'>
-			<h1 class='display-2'>Překlady</h1>
-			<h3>studií, odborných prací, článků</h3>
-			<button type= 'button' class = 'btn btn-outline-light btn-lg' data-toggle="collapse" data-target="#table" onClick="document.getElementById('fun').scrollIntoView();">Zobrazit Ceník</button>
+			<h1 class='display-2'>{{ _('Překlady') }}</h1>
+			<h3>{{ _('studií, odborných prací, článků') }}</h3>
+			<button type= 'button' class = 'btn btn-outline-light btn-lg' data-toggle="collapse" data-target="#table" onClick="document.getElementById('fun').scrollIntoView();">{{ _('Zobrazit Ceník') }}</button>
 		
 			
-			<button type= 'button' class = 'btn btn-primary btn-lg' onClick = "location.href = 'contactform'">Poptat zakázku</button>
+			<button type= 'button' class = 'btn btn-primary btn-lg' onClick = "location.href = 'contactform'">{{ _('Poptat zakázku') }}</button>
 		</div>
 	</div>
 	<div class = 'carousel-item'>
 		<img src="{{url_for('static', filename = 'img/student-stressed.png')}}"/>
 		<div class = 'carousel-caption'>
 			<div class = 'second-image'>
-			<h3>Máte hlavu plnou jiných problémů?</h3>
+			<h3>{{ _('Máte hlavu plnou jiných problémů?') }}</h3>
 			</div>
 		</div>
 	</div>
@@ -93,6 +93,7 @@
 		 </div>
 </div>
 
+
 <!-- <three column section styling>
  -->
 <style>
@@ -143,20 +144,20 @@
 		<p>Překlady, korektury, titulky, přepisy </p>
 		
 
-		 </div>
+	</div>
+</div>
 </div>
 
 
 
-
 <!--- Fixed background -->
-<figure>
+<!-- <figure>
 	<div class ='fixed-wrap'>
 		<div id= 'fixed'>
 		</div>
 		
 	</div>
-</figure>
+</figure> -->
 
 <!--- Emoji Section -->
 <button class="fun btn btn-outline-secondary" id = "fun" data-toggle="collapse" data-target="#table">klikni pro ceník
@@ -316,7 +317,7 @@ function myfunc() {
 </div>
 </div>
 
-
+</div>
 
 
 <!--- Two Column Section -->
